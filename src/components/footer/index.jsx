@@ -11,7 +11,7 @@ const Footer = () => {
               <img src={require("../../assets/images/footer_logo.png")} className=" tw-mx-auto" />
               <h2 className="  tw-pt-3 tw-font-zen-dots tw-text-white">Token Address</h2>
               <p className=" tw-text-xl tw-font-poppins tw-text-white tw-pt-5">
-              CEC: 0x33E4d3163e66B46bAbC0faF8B30C6c36DD4Ab9E9
+              CEC: 0x04d279873de44a9F9753E0EC8fD3404F42C56eeb
               </p>
               <ul className=" tw-p-0 tw-pt-4 tw-flex  tw-justify-center tw-gap-5 tw-items-center">
                 <li>
