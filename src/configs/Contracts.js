@@ -3,7 +3,7 @@ export const cec_address="0x04d279873de44a9F9753E0EC8fD3404F42C56eeb"
 export const usdt_address="0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb";
 export const usdc_address="0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
 
-export const presale_address="0x8c02A80Cb4738025DCbf30C6b87C3C44a11C8FD1";
+export const presale_address="0x74D7c245ffE784E2544e498A39B3f5a4504615aC";
 
 
 

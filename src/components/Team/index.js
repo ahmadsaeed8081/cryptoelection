@@ -68,31 +68,19 @@ const teamMembers = [
     name: "Don Trumpski",
     role: "Chief Election Integrity Officer",
     image: require("../../assets/images/t1.png"),
-    // links: [
-    //   { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
-    //   { url: "", icon: "Symbol.png", alt: "Symbol" },
-    //   { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
-    // ],
+
   },
   {
     name: "Donni trumpberg",
     role: "Chief Campaign Finance Officer",
     image: require("../../assets/images/t2.png"),
-    // links: [
-    //   { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
-    //   { url: "", icon: "Symbol.png", alt: "Symbol" },
-    //   { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
-    // ],
+
   },
   {
     name: "il Donald Trumpo",
     role: "Chief Blockchain Border Wall Security Officer",
     image: require("../../assets/images/t3.png"),
-    // links: [
-    //   { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
-    //   { url: "", icon: "Symbol.png", alt: "Symbol" },
-    //   { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
-    // ],
+
   },
  
 ];
