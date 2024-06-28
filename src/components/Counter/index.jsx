@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const Counter = () => {
+const Counter = (props) => {
+
   const calculateTimeLeft = () => {
-    const difference = +new Date('2024-12-31T00:00:00') - +new Date();
+    const difference = Number(props.time) * 1000 - new Date();
+
     let timeLeft = {};
 
     if (difference > 0) {
@@ -12,7 +14,8 @@ const Counter = () => {
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
-    } else {
+    } else 
+    {
       timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
 
@@ -27,7 +30,7 @@ const Counter = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [props.time]);
 
   return (
     <div>

@@ -9,8 +9,15 @@ import Button from "../Button";
 import { MdMenu } from "react-icons/md";
 import { MdOutlineClose } from "react-icons/md";
 
+
+
+import { useWeb3Modal } from '@web3modal/wagmi/react'
+import { useAccount, useReadContract, useWriteContract } from "wagmi";
+import { useAccountEffect } from 'wagmi'
+
+
 const Header = () => {
-  const [open, setOpen] = useState(false);
+  const [open1, setOpen] = useState(false);
   const [holdersDropdownOpen, setHoldersDropdownOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -27,6 +34,13 @@ const Header = () => {
       }
     }, 0);
   };
+
+
+  const { open, close } = useWeb3Modal()
+  const { isConnected,isDisconnected,chain } = useAccount()
+  const { address } = useAccount();
+
+  
 
   return (
     <nav className=" container tw-top-0 tw-z-20">
@@ -77,11 +91,11 @@ const Header = () => {
               Road Map
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to={"/staking"} className="tw-text-white">
               Staking
             </Link>
-          </li>
+          </li> */}
         
           <li>
             <Link
@@ -97,21 +111,23 @@ const Header = () => {
         <div className="md:tw-block tw-hidden">
          
 
-          <button className=" tw-px-6 tw-text-center tw-rounded-md tw-py-2.5    tw-flex tw-items-center tw-justify-center tw-gap-1  tw-bg-white tw-text-black"> <FaRegUser color="black" /> Connect Wallet</button>
+          <button onClick={() => open()} className=" tw-px-6 tw-text-center tw-rounded-md tw-py-2.5    tw-flex tw-items-center tw-justify-center tw-gap-1  tw-bg-white tw-text-black"> 
+          <FaRegUser color="black" /> {!isConnected?("Connect Wallet"):(address.slice(0,4)+"...."+address.slice(39,42))}
+          </button>
         </div>
 
         <div
           className="tw-text-3xl lg:tw-hidden  tw-z-50"
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen(!open1)}
         >
-          {open ? <MdOutlineClose color="white" /> : <MdMenu color="white" />}
+          {open1 ? <MdOutlineClose color="white" /> : <MdMenu color="white" />}
         </div>
 
         {/* Mobile nav */}
         <div
           className={`
             lg:tw-hidden   tw-bg-[#111a3a]  tw-bg-cover  tw-bg-Hero tw-fixed tw-w-full tw-top-0 tw-overflow-y-auto tw-bottom-0 tw-leading-10 tw-py-10 
-            tw-duration-500 ${open ? "tw-left-0" : "tw-left-[-100%]"}
+            tw-duration-500 ${open1 ? "tw-left-0" : "tw-left-[-100%]"}
           `}
         >
          
@@ -171,11 +187,11 @@ const Header = () => {
                 Road Map
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to={"/staking"} className="tw-text-white">
                 Staking
               </Link>
-            </li>
+            </li> */}
            
             <li>
               <Link
@@ -192,7 +208,8 @@ const Header = () => {
             </li>
 
             <li className=" tw-pt-5">
-            <button className=" tw-px-6 tw-text-center tw-rounded-md tw-py-2.5    tw-flex tw-items-center tw-justify-center tw-gap-1  tw-bg-white tw-text-black"> <FaRegUser color="black" /> Connect Wallet</button>
+            <button  onClick={() => open()}  className=" tw-px-6 tw-text-center tw-rounded-md tw-py-2.5    tw-flex tw-items-center tw-justify-center tw-gap-1  tw-bg-white tw-text-black"> 
+            <FaRegUser color="black" /> {!isConnected?("Connect Wallet"):(address.slice(0,4)+"...."+address.slice(39,42))}</button>
 
             </li>
           </ul>
