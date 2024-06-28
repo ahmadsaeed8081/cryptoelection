@@ -26,6 +26,8 @@ const Team = () => {
                  
            
                     <img
+                    // height={100}
+                    // width={400}
                       src={member.image}
                       className=" tw-mx-auto"
                       alt={member.name}
@@ -37,7 +39,7 @@ const Team = () => {
                     {member.name}
                   </h3>
                   <p className="tw-text-white">{member.role}</p>
-                  {member.links && (
+                  {/* {member.links && (
                     <ul className="tw-flex p-0 tw-gap-3 tw-pt-2 tw-justify-center tw-items-center">
                       {member.links.map((link, i) => (
                         <li key={i}>
@@ -50,7 +52,7 @@ const Team = () => {
                         </li>
                       ))}
                     </ul>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -63,34 +65,34 @@ const Team = () => {
 
 const teamMembers = [
   {
-    name: "hello",
-    role: "Wildcard ",
-    image: require("../../assets/images/profile.png"),
-    links: [
-      { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
-      { url: "", icon: "Symbol.png", alt: "Symbol" },
-      { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
-    ],
+    name: "Don Trumpski",
+    role: "Chief Election Integrity Officer",
+    image: require("../../assets/images/t1.png"),
+    // links: [
+    //   { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
+    //   { url: "", icon: "Symbol.png", alt: "Symbol" },
+    //   { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
+    // ],
   },
   {
-    name: "Aaron, H.",
-    role: "Head of Technology",
-    image: require("../../assets/images/profile.png"),
-    links: [
-      { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
-      { url: "", icon: "Symbol.png", alt: "Symbol" },
-      { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
-    ],
+    name: "Donni trumpberg",
+    role: "Chief Campaign Finance Officer",
+    image: require("../../assets/images/t2.png"),
+    // links: [
+    //   { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
+    //   { url: "", icon: "Symbol.png", alt: "Symbol" },
+    //   { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
+    // ],
   },
   {
-    name: "Ahmad",
-    role: "Developer",
-    image: require("../../assets/images/profile.png"),
-    links: [
-      { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
-      { url: "", icon: "Symbol.png", alt: "Symbol" },
-      { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
-    ],
+    name: "il Donald Trumpo",
+    role: "Chief Blockchain Border Wall Security Officer",
+    image: require("../../assets/images/t3.png"),
+    // links: [
+    //   { url: "", icon: "ic_sharp-discord.png", alt: "Discord" },
+    //   { url: "", icon: "Symbol.png", alt: "Symbol" },
+    //   { url: "", icon: "iconoir_telegram.png", alt: "Telegram" },
+    // ],
   },
  
 ];
